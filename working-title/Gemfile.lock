@@ -323,6 +323,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails
   spring
+  thor (~> 1.0)
   turbolinks
   uglifier
   web-console (~> 2.0)
