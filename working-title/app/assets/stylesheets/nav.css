@@ -5,10 +5,29 @@ nav {
   justify-content: space-between;
   height: 110px;
   color:#71dfbe;
-  background-color: #1d1f20;
+  background-color: #2b2d2f;
   width: 100%;
   font-size: 2em;
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-top: 2em;
+}
+
+.title {
+  font-family: "Comfortaa";
+}
+
+.search-label {
+  font-family: "Comfortaa";
+  font-size: 0.75em;
+}
+
+.search {
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+#search-button {
+  height: 34px;
+  font-size: 17px;
 }
