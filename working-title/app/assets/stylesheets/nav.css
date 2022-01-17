@@ -1,14 +1,44 @@
 nav {
-  top: 0;
-  position: absolute;
   display: flex;
   justify-content: space-between;
-  height: 110px;
-  color:#71dfbe;
+  color:#00b84c;
   background-color: #1d1f20;
-  width: 100%;
+  padding: 2em 1.5em 1em;
+  font-family: 'Roboto'
+}
+
+.title {
   font-size: 2em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 2em;
+}
+
+.search-bar {
+  background-color: #2b2d2f;
+  margin-top: 1em;
+}
+
+.search-field {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 1em;
+  font-family: 'Roboto';
+  padding: 0.5em 3em 0.5em .5em;
+}
+
+#search-button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #00b84c;
+}
+
+.btn {
+  background-color: #2b2d2f;
+  color: #00b84c;
+  border: 0;
+  border-radius: .5em;
+  padding: 1em 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Roboto'
 }
