@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'users/new'
-  get 'welcome/new'
-  get 'about/index'
-  
-  resources :about, only: [:index]
+
+  # Home page below
+  # root to: 'tournaments#index'
+
   resources :tournaments
   resources :profiles
 
