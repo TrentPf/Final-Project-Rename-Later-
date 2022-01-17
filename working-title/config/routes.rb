@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # Home page below
+  # root to: 'tournaments#index'
+
   resources :tournaments
   resources :profiles
 

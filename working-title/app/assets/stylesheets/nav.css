@@ -1,0 +1,14 @@
+nav {
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 110px;
+  color:#71dfbe;
+  background-color: #1d1f20;
+  width: 100%;
+  font-size: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 2em;
+}
