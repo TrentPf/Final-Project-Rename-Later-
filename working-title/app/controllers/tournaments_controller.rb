@@ -3,7 +3,7 @@ class TournamentsController < ApplicationController
 
   # GET /tournaments or /tournaments.json
   def index
-    @tournaments = Tournament.all
+    @tournaments = Tournament.search(params[:search], params[:game])
   end
 
   # GET /tournaments/1 or /tournaments/1.json
@@ -65,6 +65,6 @@ class TournamentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tournament_params
-      params.fetch(:tournament, {})
+      params.require(:tournament).permit(:name, :game, :search)
     end
 end

@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  # Home page below
-  # root to: 'tournaments#index'
-
-  resources :tournaments
-  resources :profiles
+  resources :tournaments, only: [:index, :show]
+  resources :users, only: [:index, :show]
 
   # Not certain for this yet
   resource :make, only: [:show] do
     post :add_tournament
     post :remove_tournament
   end
+
+# Not certain if we're using an admin, so commented out for now
+  # namespace :admin do
+    # root to: 'dashboard#show'
+    # resources :tournaments, except: [:edit, :update, :show]
+    # resources :users
+  # end
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

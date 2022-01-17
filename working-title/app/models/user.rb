@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :entrants
+  has_many :tournaments, through: :entrants
 
   has_secure_password
 
