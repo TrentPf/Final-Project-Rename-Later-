@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-
+  get 'about/index'
+  
+  resources :about, only: [:index]
   resources :tournaments
   resources :profiles
 
