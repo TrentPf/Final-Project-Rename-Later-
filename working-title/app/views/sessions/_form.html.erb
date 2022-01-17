@@ -1,0 +1,17 @@
+<br>
+<div class="container">
+<%= form_for '/login' do |f| %>
+      <div class="col-sm-4 col-sm-offset-4">
+      <div class="form-floating">
+        <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
+        <label for="floatingInput">Username</label>
+      </div>
+      <div class="form-floating">
+        <%= f.text_field :password, class: 'form-control', placeholder: 'First Name' , type: 'password' %>
+        <label for="floatingInput">Password</label>
+      </div>
+        <%= submit_tag "Submit", class: "btn btn-outline-success" %>
+    </div>
+  </div>
+
+<% end %>
