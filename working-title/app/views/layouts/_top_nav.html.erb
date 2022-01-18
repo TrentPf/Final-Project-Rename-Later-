@@ -12,8 +12,8 @@
 <% end %>
 <div class="middle-header">
 <%= form_tag("/tournaments", method: "get", class: "search-bar") do %>
-  <%= text_field_tag :search, nil, class: "search-field" %>
-  <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "Select Game", class: "select" %>
+  <%= text_field_tag :search, nil, class: "search-field", placeholder: "Search tournaments" %>
+  <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate", "Other..."]), include_blank: "Select Game", class: "select" %>
   <%= button_tag "", class: "fas fa-search search-button" %>
 <% end %>
 </div>
