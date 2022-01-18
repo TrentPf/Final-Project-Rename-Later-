@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :tournaments, only: [:index, :show]
-  resources :users, only: [:index, :show]
+  # Home page below
+  root to: 'home#index'
+
+  resources :tournaments
+  resources :profiles
 
   # Not certain for this yet
   resource :make, only: [:show] do

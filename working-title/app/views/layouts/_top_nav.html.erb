@@ -6,13 +6,32 @@
   <div class="middle-header">
     <%= form_for :tournament, url: "/tournaments", method: :get do |f| %>
       <div>Search for:</div>
-      <%= f.text_field :search %>
+      <%= f.text_field :search, class: "search-bar" %>
       <%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-" %>
-      <%= f.submit "Find a tournament" %>
+      <%= f.submit <%= "fas fa-search search-icon" %> %>
     <% end %>  
   </div>
   <div class="right-side-header">
-    <button id="login-button" class="btn">Login</button>
-    <button id="register-button" class="btn">Register</button>
+    <% if current_user %>
+    <li>
+      <%= link_to '/logout' do %>
+        <%= fa_icon "sign-out" %>
+        Log Out
+      <% end %>
+    </li>
+    <% else %>
+    <li>
+      <%= link_to '/signup' do %>
+        <%= fa_icon "sign-in" %>
+        Sign Up
+      <% end %>
+    </li>
+    <li>
+      <%= link_to '/login' do %>
+        <%= fa_icon "sign-in" %>
+        Login
+      <% end %>
+    </li>
+  <% end %>
   </div>
 </nav>
