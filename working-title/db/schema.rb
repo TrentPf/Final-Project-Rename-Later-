@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2022_01_17_213821) do
-=======
 ActiveRecord::Schema.define(version: 2022_01_17_231356) do
->>>>>>> feature/user-auth
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "entrants", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -30,11 +25,6 @@ ActiveRecord::Schema.define(version: 2022_01_17_231356) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "game"
-=======
-  create_table "tournaments", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
->>>>>>> feature/user-auth
   end
 
   create_table "users", force: :cascade do |t|
