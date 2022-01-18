@@ -2,36 +2,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 <nav>
-  <span class="title">App Name</span>
-  <div class="middle-header">
-    <%= form_for :tournament, url: "/tournaments", method: :get do |f| %>
-      <div>Search for:</div>
-      <%= f.text_field :search, class: "search-bar" %>
-      <%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-" %>
-      <%= f.submit <%= "fas fa-search search-icon" %> %>
-    <% end %>  
-  </div>
-  <div class="right-side-header">
-    <% if current_user %>
-    <li>
-      <%= link_to '/logout' do %>
-        <%= fa_icon "sign-out" %>
-        Log Out
-      <% end %>
-    </li>
-    <% else %>
-    <li>
-      <%= link_to '/signup' do %>
-        <%= fa_icon "sign-in" %>
-        Sign Up
-      <% end %>
-    </li>
-    <li>
-      <%= link_to '/login' do %>
-        <%= fa_icon "sign-in" %>
-        Login
-      <% end %>
-    </li>
+<%= link_to '/', class: "title" do %>
+  matchmaker.gg
+<% end %>
+<div class="middle-header">
+<%= form_tag("/tournaments", method: "get", class: "search-bar") do %>
+  <%= text_field_tag :search, nil, class: "search-field" %>
+  <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "Select Game", class: "select" %>
+  <%= button_tag "", class: "fas fa-search search-button" %>
+<% end %>
+</div>
+<div class="right-side-header">
+  <% if current_user %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    My Profile
   <% end %>
-  </div>
+
+  <%= link_to '/logout', class: "btn" do %>
+    My Events
+  <% end %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    <%= fa_icon "sign-out" %>
+    Log Out
+  <% end %>
+  <% else %>
+  <%= link_to '/signup', class: "btn" do %>
+  <%= fa_icon "sign-in" %>
+    Login
+  <% end %>
+    <%= link_to '/login', class: "btn" do %>
+    <%= fa_icon "sign-in" %>
+      Register
+    <% end %>
+<% end %>
+</div>
 </nav>

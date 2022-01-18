@@ -6,10 +6,12 @@ class Tournament < ActiveRecord::Base
 
   def self.search(search, game)
     if search
+      caseless = search.downcase
+      caseless = caseless.capitalize
       if game
-        self.where("name LIKE ? AND game LIKE ?", "%#{search}%", "%#{game}")
+        self.where("name LIKE ? AND game LIKE ?", "%#{caseless}%", "%#{game}%")
       else
-        self.where("name LIKE ?", "%#{search}%")
+        self.where("name LIKE ?", "%#{caseless}%")
       end
     else
       @tournaments = Tournament.all
