@@ -1,10 +1,21 @@
-<p style="color: green"><%= notice %></p>
+<section class="tournaments-show">
 
-<%= render @tournament %>
+  <header class="page-header">
+    <h1><%= link_to @tournament.name %> &raquo; <%= @tournament.name %></h1>
+  </header>
 
-<div>
-  <%= link_to "Edit this tournament", edit_tournament_path(@tournament) %> |
-  <%= link_to "Back to tournaments", tournaments_path %>
+  <article class="tournament-detail">
+    <div class="row">
+      <div class="col-sm-8">
+        <dl class="dl-horizontal">
+          <dt>Name</dt>
+          <dd><%= @tournament.name %></dd>
+          <dt>Game</dt>
+          <dd><%= @tournament.game %></dd>
+        </dl>
+      </div>
+    </div>
 
-  <%= button_to "Destroy this tournament", @tournament, method: :delete %>
-</div>
+  </article>
+
+</section>

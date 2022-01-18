@@ -1,9 +1,12 @@
 <nav>
   <span class="title">App Name</span>
   <div class="middle-header">
-    <label class="search-label" for="search">Find an event: </label>
-    <input class="search" type="text" placeholder="Search...">
-    <button id="search-button" type="submit" class="btn-primary"> <i class="fas fa-search search-icon"></i></button>
+    <%= form_for :tournament, url: "/tournaments", method: :get do |f| %>
+      <div>Search for:</div>
+      <%= f.text_field :search %>
+      <%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-" %>
+      <%= f.submit "Find a tournament" %>
+    <% end %>  
   </div>
   <div class="right-side-header">
     <button id="login-button">Login</button>

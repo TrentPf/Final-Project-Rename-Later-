@@ -1,0 +1,34 @@
+<br>
+<div class="container">
+<%= form_for :user, url: '/users' do |f| %>
+    <div class="col-sm-4 col-sm-offset-4">
+    <div class="form-floating">
+      <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
+      <label for="floatingInput">Username</span>
+    </div>
+      <div class="form-floating">
+      <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
+      <label for="floatingInput">First Name</span>
+    </div>
+      <div class="form-floating">
+      <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
+      <label for="floatingInput">Last Name</span>
+    </div>
+      <div class="form-floating">
+      <%= f.text_field :email, class: 'form-control', placeholder: 'Email', type: 'email' %>
+      <label for="floatingEmail">Email</span>
+    </div>
+      <div class="form-floating">
+      <%= f.text_field :password, class: 'form-control', placeholder: 'Password', type: 'password' %>
+      <label for="floatingPassword">Password</span>
+    </div>
+      <div class="form-floating">
+      <%= f.text_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation', type: 'password' %>
+      <label for="floatingPassword">Password Confirmation</span>
+    </div>
+
+  </div>
+       <%= f.submit "Submit", class: "btn btn-outline-success" %> 
+   </div>
+
+  <% end %>
