@@ -6,21 +6,40 @@
 </head>
 
 <nav>
-  <span class="title"><i class="fas fa-gamepad"></i>matchmaker.gg</span>
-  <div class="middle-header">
-    <form class="search-bar">
-    <input class="search-field" type="text" placeholder="Search tournaments">
-    <button id="search-button" type="submit" class="btn-primary"> <i class="fas fa-search search-icon"></i></button>
-    </form>
-  </div>
-  <div class="right-side-header">
-    <% if current_user %>
-    <%= link_to '/profile', class: "btn" do %>Profile<% end %>
-    <%= link_to '/my-events', class: "btn" do %>My Events<% end %>
-    <%= link_to '/logout', class: "btn" do %>Logout<% end %>
-    <% else %>
-    <%= link_to '/login', class: "btn" do %><%=fa_icon "sign-in"%>Login<% end %>
-    <%= link_to '/signup', class: "btn" do %>Register<% end %>
+<%= link_to '/', class: "title" do %>
+  matchmaker.gg
+<% end %>
+<div class="middle-header">
+<%= form_tag("/tournaments", method: "get", class: "search-bar") do %>
+  <%= text_field_tag :search, nil, class: "search-field" %>
+  <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "Select Game", class: "select" %>
+  <%= button_tag "", class: "fas fa-search search-button" %>
+<% end %>
+</div>
+<div class="right-side-header">
+  <% if current_user %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    My Profile
+  <% end %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    My Events
+  <% end %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    <%= fa_icon "sign-out" %>
+    Log Out
+  <% end %>
+  <% else %>
+  <%= link_to '/signup', class: "btn" do %>
+  <%= fa_icon "sign-in" %>
+    Login
+  <% end %>
+    <%= link_to '/login', class: "btn" do %>
+    <%= fa_icon "sign-in" %>
+      Register
     <% end %>
-  </div>
+<% end %>
+</div>
 </nav>
