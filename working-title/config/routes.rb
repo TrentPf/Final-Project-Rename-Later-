@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   # Home page below
-  # root to: 'tournaments#index'
+  root to: 'home#index'
 
   resources :tournaments
   resources :profiles

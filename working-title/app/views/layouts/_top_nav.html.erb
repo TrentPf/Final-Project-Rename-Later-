@@ -1,8 +1,12 @@
+<head>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+</head>
+
 <nav>
-  <span class="title">Home Button</span>
+  <span class="title"><i class="fas fa-gamepad"></i>matchmaker.gg</span>
   <div class="middle-header">
     <form class="search-bar">
     <input class="search-field" type="text" placeholder="Search tournaments">
@@ -10,7 +14,13 @@
     </form>
   </div>
   <div class="right-side-header">
-    <button id="login-button" class="btn">Login</button>
-    <button id="register-button" class="btn">Register</button>
+    <% if current_user %>
+    <%= link_to '/profile', class: "btn" do %>Profile<% end %>
+    <%= link_to '/my-events', class: "btn" do %>My Events<% end %>
+    <%= link_to '/logout', class: "btn" do %>Logout<% end %>
+    <% else %>
+    <%= link_to '/login', class: "btn" do %><%=fa_icon "sign-in"%>Login<% end %>
+    <%= link_to '/signup', class: "btn" do %>Register<% end %>
+    <% end %>
   </div>
 </nav>
