@@ -1,16 +1,45 @@
+<head>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
+</head>
+
 <nav>
-  <span class="title">Home Button</span>
-  <div class="middle-header">
-    <form class="search-bar">
-    <input class="search-field" type="text" placeholder="Search tournaments">
-    <button id="search-button" type="submit" class="btn-primary"> <i class="fas fa-search search-icon"></i></button>
-    </form>
-  </div>
-  <div class="right-side-header">
-    <button id="login-button" class="btn">Login</button>
-    <button id="register-button" class="btn">Register</button>
-  </div>
+<%= link_to '/', class: "title" do %>
+  matchmaker.gg
+<% end %>
+<div class="middle-header">
+<%= form_tag("/tournaments", method: "get", class: "search-bar") do %>
+  <%= text_field_tag :search, nil, class: "search-field" %>
+  <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "Select Game", class: "select" %>
+  <%= button_tag "", class: "fas fa-search search-button" %>
+<% end %>
+</div>
+<div class="right-side-header">
+  <% if current_user %>
+
+  <%= link_to '/profile', class: "btn" do %>
+    My Profile
+  <% end %>
+
+  <%= link_to '/events', class: "btn" do %>
+    My Events
+  <% end %>
+
+  <%= link_to '/logout', class: "btn" do %>
+    <%= fa_icon "sign-out" %>
+    Log Out
+  <% end %>
+  <% else %>
+  <%= link_to '/login', class: "btn" do %>
+  <%= fa_icon "sign-in" %>
+    Login
+  <% end %>
+    <%= link_to '/signup', class: "btn" do %>
+    <%= fa_icon "sign-in" %>
+      Register
+    <% end %>
+<% end %>
+</div>
 </nav>
