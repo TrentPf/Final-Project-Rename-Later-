@@ -1,0 +1,36 @@
+.tournament-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1d1f20;
+  width: 20%;
+  margin: 2em;
+  color: #99999c;
+  box-shadow: 0 4px 8px 0 #ffffff;
+  transition: 0.2s;
+  border-radius: .5em;
+  border: 0;
+  text-decoration: none;
+}
+
+.game-and-organizer {
+  display: flex;
+  
+}
+
+.tournament-card:hover {
+  transform: translateY(-5%);
+}
+
+.icon {
+  margin-right: .5em;
+}
+
+.tournament-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
