@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   # Home page below
   root to: 'home#index'
-
   resources :tournaments, only: [:index, :show]
   resources :users, only: [:index, :show]
 
@@ -18,6 +17,9 @@ Rails.application.routes.draw do
     # resources :tournaments, except: [:edit, :update, :show]
     # resources :users
   # end
+
+  get '/newtournament' => 'tournaments#new'
+  post '/tournaments' => 'tournaments#create'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

@@ -1,9 +1,11 @@
-<h1>New tournament</h1>
+<h4>Start a tournament!<h4>
 
-<%= render "form", tournament: @tournament %>
-
-<br>
-
-<div>
-  <%= link_to "Back to tournaments", tournaments_path %>
-</div>
+<%= form_for :tournament, url: '/tournaments' do |f| %>
+  <label for="name"><span>Name <span class="required">*</span></span><%= f.text_field :name, class: 'input-field', placeholder: 'Enter a name' %></label>
+  <label for="game"><span>Game <span class="required">*</span></span><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-" %></label>
+  <label for="skill"><span>Skill <span class="required">*</span></span><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-" %></label>
+  <label for="region"><span>Region <span class="required">*</span></span><%= f.select :game, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-" %></label>
+  <label for="date"><span>Date <span class="required">*</span></span><%= f.date_field :date, min: Date.today %></label>
+  <label for="time"><span>Time <span class="required">*</span></span><%= f.time_field :date, min: Time.now %></label>
+  <label><span> </span><%= submit_tag "Submit" %></label>
+<% end %>

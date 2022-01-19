@@ -13,7 +13,6 @@ class TournamentsController < ApplicationController
 
   # GET /tournaments/new
   def new
-    @tournament = Tournament.new
   end
 
   # GET /tournaments/1/edit
@@ -22,17 +21,12 @@ class TournamentsController < ApplicationController
 
   # POST /tournaments or /tournaments.json
   def create
-    @tournament = Tournament.new(tournament_params)
-
-    respond_to do |format|
-      if @tournament.save
-        format.html { redirect_to tournament_url(@tournament), notice: "Tournament was successfully created." }
-        format.json { render :show, status: :created, location: @tournament }
+    tournament = Tournament.new(tournament_params)
+      if tournament.save
+        redirect_to '/tournaments#show'
       else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @tournament.errors, status: :unprocessable_entity }
+        redirect_to '/newtournament'
       end
-    end
   end
 
   # PATCH/PUT /tournaments/1 or /tournaments/1.json
@@ -59,13 +53,8 @@ class TournamentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tournament
-      @tournament = Tournament.find(params[:id])
-    end
-
     # Only allow a list of trusted parameters through.
     def tournament_params
-      params.require(:tournament).permit(:name, :game, :search)
+      params.require(:tournament).permit(:name, :game, :region, :skill, :time, :date, :search)
     end
 end

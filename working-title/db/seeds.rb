@@ -11,7 +11,7 @@
 tourn1 = Tournament.create({
   name: "Tournament 1",
   game: "League of Legends",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
   region: "NA"
@@ -20,7 +20,7 @@ tourn1 = Tournament.create({
 tourn2 = Tournament.create({
   name: "Tournament 2",
   game: "Super Smash Bros Ultimate",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
   region: "NA"
@@ -29,7 +29,7 @@ tourn2 = Tournament.create({
 tourn3 = Tournament.create({
   name: "Tournament 3",
   game: "Super Smash Bros Ultimate",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
   region: "NA"

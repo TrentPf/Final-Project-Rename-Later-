@@ -3,6 +3,10 @@ class Tournament < ActiveRecord::Base
   has_many :users, through: :entrants
   validates :name, presence: true
   validates :game, presence: true
+  validates :skill, presence: true
+  validates :region, presence: true
+  validates :date, presence: true
+  validates :time, presence: true
 
   def self.search(search, game)
     if search
