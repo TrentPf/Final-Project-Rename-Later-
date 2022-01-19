@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 30px 1fr 30px;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+
+}
+
+.sidebar { grid-area: sidebar; }
+
+.content { grid-area: content; }
+
+/**
+ * Custom CSS added here 
+ */
+
+.container {
+  max-width: 980px;
+  height: calc(100vh - 3rem);
+  margin: 0 auto;  
+}
+.container > * {
+  display: grid;
+  /* place-content: center; */
+  border-radius: 5px;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  box-shadow: 0 1px 6px 0 hsl(0, 0%, 0%, 20%);
+}
+
+.content {
+  place-content: center;
+  color: hsl(0, 0%, 100%);
+  background-color: #1d1f20;
+}
+.sidebar {
+  color: hsl(0, 0%, 100%);
+  background-color: #1d1f20;
+}
+
+.heading {
+  text-align: center;
+  color: #00b84c;
+  font-size: 30px;
+}
+
+img {
+margin-top: -2em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 50%;
+}
