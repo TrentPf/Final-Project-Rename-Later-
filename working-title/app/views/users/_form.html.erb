@@ -1,34 +1,17 @@
-<br>
-<div class="container">
+
+</form>
+</div>
+
+<div class="form-style">
 <%= form_for :user, url: '/users' do |f| %>
-    <div class="col-sm-4 col-sm-offset-4">
-    <div class="form-floating">
-      <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
-      <label for="floatingInput">Username</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
-      <label for="floatingInput">First Name</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
-      <label for="floatingInput">Last Name</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :email, class: 'form-control', placeholder: 'Email', type: 'email' %>
-      <label for="floatingEmail">Email</label>
-    </div>
-      <div class="form-floating">
-      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-      <label for="floatingPassword">Password</label>
-    </div>
-      <div class="form-floating">
-      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation' %>
-      <label for="floatingPassword">Password Confirmation</label>
-    </div>
+<label for="field1"><span>Username <span class="required">*</span></span><%= f.text_field :username, class: 'input-field', placeholder: 'Username' %></label>
+<label for="field2"><span>First Name <span class="required">*</span></span><%= f.text_field :first_name, class: 'input-field', placeholder: 'First Name' %></label>
+<label for="field3"><span>Last Name <span class="required">*</span></span><%= f.text_field :last_name, class: 'input-field', placeholder: 'Last Name' %></label>
+<label for="field4"><span>Email <span class="required">*</span></span><%= f.text_field :email, class: 'input-field', placeholder: 'Email', type: 'email' %></label>
+<label for="field5"><span>Password <span class="required">*</span></span><%= f.text_field :password, class: 'input-field', placeholder: 'Password', type: 'password' %></label>
+<label for="field6"><span>Password Confirmation <span class="required">*</span></span><%= f.text_field :password_confirmation, class: 'input-field', placeholder: 'Password Confirmation', type: 'password' %></label>
+<label class= 'btn'><span> </span><%= submit_tag "Submit" %></label>
+<% end %>
 
-  </div>
-       <%= f.submit "Submit", class: "btn btn-outline-success" %> 
-   </div>
-
-  <% end %>
+</form>
+</div>
