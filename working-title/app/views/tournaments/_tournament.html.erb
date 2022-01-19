@@ -1,6 +1,10 @@
 <%= link_to tournament, class: "tournament-card" do %>
     <header>
-      <p>banner image here</p>
+    <% if tournament.game == "League of Legends" %>
+      <%= image_tag ("lol.png"), class: "banner-img" %>
+    <% elsif tournament.game == "Super Smash Bros Ultimate" %>
+      <%= image_tag ("smash.png"), class: "banner-img" %>
+    <% end %>
     </header>
       <h3 class="tournament-name"><%= tournament.name %></h3>
       <h4><%= tournament.game %></h4>
