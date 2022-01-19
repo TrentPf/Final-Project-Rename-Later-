@@ -34,3 +34,30 @@ tourn3 = Tournament.create({
   skill: "low",
   region: "NA"
 })
+
+tourn4 = Tournament.create({
+  name: "Tournament 4",
+  game: "League of Legends",
+  date: "04/24/2022",
+  time: "17:00",
+  skill: "low",
+  region: "NA"
+})
+
+tourn5 = Tournament.create({
+  name: "Tournament 5",
+  game: "Super Smash Bros Ultimate",
+  date: "04/24/2022",
+  time: "17:00",
+  skill: "low",
+  region: "NA"
+})
+
+tourn6 = Tournament.create({
+  name: "Tournament 6",
+  game: "Super Smash Bros Ultimate",
+  date: "04/24/2022",
+  time: "17:00",
+  skill: "low",
+  region: "NA"
+})
