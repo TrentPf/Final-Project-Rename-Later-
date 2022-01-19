@@ -1,14 +1,13 @@
-<br>
-<div class="container">
-<%= form_tag '/login' do %>
-      <div class="form">
-        <%= text_field_tag :username,params[:user_name], class: 'form-control'%>
-        <label for="floatingInput">Username</label>
-        <%= password_field_tag :password,nil, class: 'form-control', type: 'password' %>
-        <label for="floatingInput">Password</label>
-      </div>
-        <%= submit_tag "Submit", class: "btn btn-outline-success" %>
-    </div>
-  </div>
+</form>
+</div>
 
+<div class="form-style">
+<%= form_tag '/login' do %>
+<label for="field1"><span>Username <span class="required">*</span></span><%= text_field_tag :username,params[:user_name], class: 'input-field', placeholder: 'Username' %></label>
+<label for="field2"><span>Password <span class="required">*</span></span><%= password_field_tag :password,nil, class: 'input-field', type: 'password', placeholder: 'Password' %></label>
+
+<label class= 'btn'><span> </span><%= submit_tag "Submit" %></label>
 <% end %>
+
+</form>
+</div>

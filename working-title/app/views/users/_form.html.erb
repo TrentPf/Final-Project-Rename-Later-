@@ -1,17 +1,17 @@
 
-<head>
+</form>
+</div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<div class="form-style">
+<%= form_for :user, url: '/users' do |f| %>
+<label for="field1"><span>Username <span class="required">*</span></span><%= f.text_field :username, class: 'input-field', placeholder: 'Username' %></label>
+<label for="field2"><span>First Name <span class="required">*</span></span><%= f.text_field :first_name, class: 'input-field', placeholder: 'First Name' %></label>
+<label for="field3"><span>Last Name <span class="required">*</span></span><%= f.text_field :last_name, class: 'input-field', placeholder: 'Last Name' %></label>
+<label for="field4"><span>Email <span class="required">*</span></span><%= f.text_field :email, class: 'input-field', placeholder: 'Email', type: 'email' %></label>
+<label for="field5"><span>Password <span class="required">*</span></span><%= f.text_field :password, class: 'input-field', placeholder: 'Password', type: 'password' %></label>
+<label for="field6"><span>Password Confirmation <span class="required">*</span></span><%= f.text_field :password_confirmation, class: 'input-field', placeholder: 'Password Confirmation', type: 'password' %></label>
+<label class= 'btn'><span> </span><%= submit_tag "Submit" %></label>
+<% end %>
 
-</head>
-
-<<div class="form-style-6">
-<h1>Contact Us</h1>
-<form>
-<input type="text" name="field1" placeholder="Your Name" />
-<input type="email" name="field2" placeholder="Email Address" />
-<textarea name="field3" placeholder="Type your Message"></textarea>
-<input type="submit" value="Send" />
 </form>
 </div>
