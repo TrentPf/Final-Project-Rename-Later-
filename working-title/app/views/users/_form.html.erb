@@ -1,34 +1,17 @@
-<br>
-<div class="container">
-<%= form_for :user, url: '/users' do |f| %>
-    <div class="col-sm-4 col-sm-offset-4">
-    <div class="form-floating">
-      <%= f.text_field :username, class: 'form-control', placeholder: 'Username' %>
-      <label for="floatingInput">Username</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :first_name, class: 'form-control', placeholder: 'First Name' %>
-      <label for="floatingInput">First Name</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :last_name, class: 'form-control', placeholder: 'Last Name' %>
-      <label for="floatingInput">Last Name</label>
-    </div>
-      <div class="form-floating">
-      <%= f.text_field :email, class: 'form-control', placeholder: 'Email', type: 'email' %>
-      <label for="floatingEmail">Email</label>
-    </div>
-      <div class="form-floating">
-      <%= f.password_field :password, class: 'form-control', placeholder: 'Password' %>
-      <label for="floatingPassword">Password</label>
-    </div>
-      <div class="form-floating">
-      <%= f.password_field :password_confirmation, class: 'form-control', placeholder: 'Password Confirmation' %>
-      <label for="floatingPassword">Password Confirmation</label>
-    </div>
 
-  </div>
-       <%= f.submit "Submit", class: "btn btn-outline-success" %> 
-   </div>
+<head>
 
-  <% end %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<<div class="form-style-6">
+<h1>Contact Us</h1>
+<form>
+<input type="text" name="field1" placeholder="Your Name" />
+<input type="email" name="field2" placeholder="Email Address" />
+<textarea name="field3" placeholder="Type your Message"></textarea>
+<input type="submit" value="Send" />
+</form>
+</div>
