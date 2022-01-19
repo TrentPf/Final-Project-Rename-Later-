@@ -8,6 +8,7 @@ class TournamentsController < ApplicationController
 
   # GET /tournaments/1 or /tournaments/1.json
   def show
+    @tournament = Tournament.find params[:id]
   end
 
   # GET /tournaments/new

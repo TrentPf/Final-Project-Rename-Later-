@@ -25,6 +25,10 @@ ActiveRecord::Schema.define(version: 2022_01_18_194534) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "game"
+    t.string "date"
+    t.string "time"
+    t.string "skill"
+    t.string "region"
   end
 
   create_table "users", force: :cascade do |t|

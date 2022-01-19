@@ -1,8 +1,20 @@
-<article class="tournament">
-  <header>
-    <h4><%= tournament.name %></h4>
-  </header>
-  <p>
-    <%= tournament.game %>
-  </p>
-</article>
+<%= link_to tournament, class: "tournament-card" do %>
+    <header>
+    <% if tournament.game == "League of Legends" %>
+      <%= image_tag ("lol.png"), class: "banner-img" %>
+    <% elsif tournament.game == "Super Smash Bros Ultimate" %>
+      <%= image_tag ("smash.png"), class: "banner-img" %>
+    <% end %>
+    </header>
+      <h3 class="tournament-name"><%= tournament.name %></h3>
+      <h4><%= tournament.game %></h4>
+      <h4>Organized by: Creator</h4>
+      <div class="tournament-info">
+        <p><i class="fas fa-calendar-week icon"></i><%= tournament.date %></p>
+        <p><i class="fas fa-clock icon"></i><%= tournament.time %></p>
+      </div>
+      <div class="tournament-info">
+        <p><i class="fas fa-medal icon"></i>Skill Level: <%= tournament.skill %></p>
+        </p><i class="fas fa-globe-americas icon"></i>Region: <%= tournament.region %></p>
+      </div>
+<% end %>
