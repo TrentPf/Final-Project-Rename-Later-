@@ -1,29 +1,11 @@
 <h4>Start a tournament!<h4>
 
 <%= form_for @tournament do |f| %>
-  <% invalid = @tournament.errors.include?(:name) %> 
-  <div class="form-group">
-    <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', class: "form-control #{'is-invalid' if invalid}" %>
-  </div>
-  <% invalid = @tournament.errors.include?(:game) %> 
-  <div class="form-group">
-    <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
-  </div>
-  <% invalid = @tournament.errors.include?(:skill) %> 
-  <div class="form-group">
-    <%= f.label :skill %><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
-  </div>
-  <% invalid = @tournament.errors.include?(:region) %> 
-  <div class="form-group"> 
-    <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
-  </div>
-  <% invalid = @tournament.errors.include?(:date) %> 
-  <div class="form-group">
-    <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', class: "form-control #{'is-invalid' if invalid}" %>
-  </div>
-  <% invalid = @tournament.errors.include?(:time) %> 
-  <div class="form-group">
-    <%= f.label :time %><%= f.time_field :time, value: '%H:%M', class: "form-control #{'is-invalid' if invalid}" %>
-  </div>  
-    <%= f.submit "Submit" %>
+  <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
+  <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
+  <%= f.label :skill %><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-", required: true %>
+  <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
+  <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
+  <%= f.label :time %><%= f.time_field :time, value: '%H:%M', required: true %>
+  <%= f.submit "Submit" %>
 <% end %>
