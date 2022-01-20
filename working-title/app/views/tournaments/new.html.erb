@@ -1,11 +1,29 @@
 <h4>Start a tournament!<h4>
 
-<%= form_for :tournament, url: '/tournaments' do |f| %>
-  <label for="name"><span>Name <span class="required">*</span></span><%= f.text_field :name, class: 'input-field', placeholder: 'Enter a name' %></label>
-  <label for="game"><span>Game <span class="required">*</span></span><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-" %></label>
-  <label for="skill"><span>Skill <span class="required">*</span></span><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-" %></label>
-  <label for="region"><span>Region <span class="required">*</span></span><%= f.select :game, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-" %></label>
-  <label for="date"><span>Date <span class="required">*</span></span><%= f.date_field :date, min: Date.today %></label>
-  <label for="time"><span>Time <span class="required">*</span></span><%= f.time_field :date, min: Time.now %></label>
-  <label><span> </span><%= submit_tag "Submit" %></label>
+<%= form_for @tournament do |f| %>
+  <% invalid = @tournament.errors.include?(:name) %> 
+  <div class="form-group">
+    <%= f.label :name %><%= f.text_field :name, class: 'input-field', placeholder: 'Enter a name', class: "form-control #{'is-invalid' if invalid}" %>
+  </div>
+  <% invalid = @tournament.errors.include?(:game) %> 
+  <div class="form-group">
+    <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
+  </div>
+  <% invalid = @tournament.errors.include?(:skill) %> 
+  <div class="form-group">
+    <%= f.label :skill %><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
+  </div>
+  <% invalid = @tournament.errors.include?(:region) %> 
+  <div class="form-group"> 
+    <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", class: "form-control #{'is-invalid' if invalid}" %>
+  </div>
+  <% invalid = @tournament.errors.include?(:date) %> 
+  <div class="form-group">
+    <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', class: "form-control #{'is-invalid' if invalid}" %>
+  </div>
+  <% invalid = @tournament.errors.include?(:time) %> 
+  <div class="form-group">
+    <%= f.label :time %><%= f.time_field :time, value: '%H:%M', class: "form-control #{'is-invalid' if invalid}" %>
+  </div>  
+    <%= f.submit "Submit" %>
 <% end %>
