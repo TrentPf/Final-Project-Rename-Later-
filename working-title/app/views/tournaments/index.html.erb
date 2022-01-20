@@ -5,7 +5,7 @@
     <div class="filters">
     <%= select_tag :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "Game", class: "tournament-filter" %>
     <%= select_tag :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "Skill Level", class: "tournament-filter" %>
-    <%= select_tag :region, options_for_select(["NA", "EU", "AS"]), include_blank: "Region", class: "tournament-filter" %>
+    <%= select_tag :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "Region", class: "tournament-filter" %>
   </header>
 
   <div id="tournaments">

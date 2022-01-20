@@ -1,11 +1,33 @@
-<h4>Start a tournament!<h4>
+<div class="tournament-container">
 
-<%= form_for @tournament do |f| %>
-  <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
-  <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
-  <%= f.label :skill %><%= f.select :skill, options_for_select(["low", "medium", "high", "very high"]), include_blank: "-Select-", required: true %>
-  <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
-  <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
-  <%= f.label :time %><%= f.time_field :time, value: '%H:%M', required: true %>
-  <%= f.submit "Submit" %>
-<% end %>
+<article class="tournament-create">
+  <h1>Create a tournament:</h1>
+  
+<div class="tournament-form">
+  <%= form_for @tournament do |f| %>
+    <div class="input-field">
+    <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
+    </div>
+    <div class="input-field">
+    <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
+    </div>
+    <div class="input-field">
+    <%= f.label :skill %><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true %>
+    </div>
+    <div class="input-field">
+    <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
+    </div>
+    <div class="input-field">
+    <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
+    </div>
+    <div class="input-field">
+    <%= f.label :time %><%= f.time_field :time, value: '%H:%M', required: true %>
+    </div>
+    <div class="create-button">
+    <%= f.submit "Submit", class: "btn" %>
+    </div>
+  <% end %>
+</div>
+</article>
+
+</div>
