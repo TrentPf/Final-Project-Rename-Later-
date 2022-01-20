@@ -13,6 +13,7 @@ class TournamentsController < ApplicationController
 
   # GET /tournaments/new
   def new
+    @tournament = Tournament.new
   end
 
   # GET /tournaments/1/edit
@@ -21,11 +22,11 @@ class TournamentsController < ApplicationController
 
   # POST /tournaments or /tournaments.json
   def create
-    tournament = Tournament.new(tournament_params)
+    @tournament = Tournament.new(tournament_params)
       if tournament.save
         redirect_to '/tournaments#show'
       else
-        redirect_to '/newtournament'
+        render :new
       end
   end
 
