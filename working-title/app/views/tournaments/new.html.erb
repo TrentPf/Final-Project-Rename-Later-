@@ -3,7 +3,7 @@
 <%= form_for @tournament do |f| %>
   <% invalid = @tournament.errors.include?(:name) %> 
   <div class="form-group">
-    <%= f.label :name %><%= f.text_field :name, class: 'input-field', placeholder: 'Enter a name', class: "form-control #{'is-invalid' if invalid}" %>
+    <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', class: "form-control #{'is-invalid' if invalid}" %>
   </div>
   <% invalid = @tournament.errors.include?(:game) %> 
   <div class="form-group">
