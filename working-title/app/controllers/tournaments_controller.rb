@@ -1,5 +1,4 @@
 class TournamentsController < ApplicationController
-  before_action :set_tournament, only: %i[ show edit update destroy ]
 
   # GET /tournaments or /tournaments.json
   def index
@@ -24,7 +23,7 @@ class TournamentsController < ApplicationController
   def create
     @tournament = Tournament.new(tournament_params)
       if @tournament.save
-        redirect_to '/tournaments#show'
+        redirect_to @tournament
       else
         render :new
       end
@@ -45,12 +44,9 @@ class TournamentsController < ApplicationController
 
   # DELETE /tournaments/1 or /tournaments/1.json
   def destroy
+    @tournament = Tournament.find params[:id]
     @tournament.destroy
 
-    respond_to do |format|
-      format.html { redirect_to tournaments_url, notice: "Tournament was successfully destroyed." }
-      format.json { head :no_content }
-    end
   end
 
   private
@@ -59,3 +55,5 @@ class TournamentsController < ApplicationController
       params.require(:tournament).permit(:name, :game, :region, :skill, :time, :date, :search)
     end
 end
+
+## Reference admin/products in jungle for methods
