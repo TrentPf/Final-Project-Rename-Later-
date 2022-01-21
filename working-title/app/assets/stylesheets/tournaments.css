@@ -26,6 +26,14 @@
   gap: 10px;
 }
 
+.tournament-input {
+  padding: 1em;
+  background-color: #1d1f20;
+  color: #99999c;
+  font-family: "Roboto";
+  border: 0;
+}
+
 .create-button {
   padding-left: 10em;
   padding-bottom: 2em;
@@ -63,7 +71,6 @@
 .tournament-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #1d1f20;
   width: 20%;
