@@ -90,7 +90,7 @@
   object-fit: contain;
 }
 
-.game-and-organizer {
+.team-and-organizer {
   display: flex;
   
 }
@@ -111,3 +111,57 @@
   font-size: 0.8em;
 }
 
+/* Tournament Ladder */
+
+#ladder {
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto";
+  padding: 10px;
+  line-height: 1.4em;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  list-style: none;
+  padding: 0;
+}
+
+.round .spacer { 
+  flex-grow: 1; 
+}
+
+.round .spacer:first-child,
+.round .spacer:last-child {
+  flex-grow: .5; 
+}
+
+.round .team-spacer{
+  flex-grow: 1;
+}
+
+li.team{
+  padding-left: 20px;
+  color: #99999c;
+}
+
+li.team span{
+  float: right;
+  margin-right: 5px;
+}
+
+li.team-a {
+  border-bottom: 1px solid #99999c;
+}
+
+li.team-spacer{ 
+  border-right: 1px solid #99999c;
+  min-height: 40px;
+}
+
+li.team-b{ 
+  border-top: 1px solid #99999c;
+}
