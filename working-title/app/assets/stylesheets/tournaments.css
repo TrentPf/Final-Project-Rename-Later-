@@ -14,7 +14,7 @@
   background-color: #1d1f20;
   width: 50%;
   height: 75%;
-  box-shadow: 0 4px 8px 0 #ffffff;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
   font-size: 1.5em;
   border-radius: .5em;
 }
@@ -76,7 +76,7 @@
   width: 20%;
   margin: 2em;
   color: #99999c;
-  box-shadow: 0 4px 8px 0 #ffffff;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
   transition: 0.2s;
   border-radius: .5em;
   border: 0;
