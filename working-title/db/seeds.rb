@@ -61,3 +61,73 @@ tourn6 = Tournament.create({
   skill: "low",
   region: "NA"
 })
+
+## USERS
+
+user1 = User.create({
+  username: "tpfeiffer",
+  email: "1@1",
+  first_name: "Trent",
+  last_name: "Pfeiffer",
+  password_digest: "abc123"
+})
+
+user2 = User.create({
+  username: "rpfeiffer",
+  email: "2@2",
+  first_name: "Riley",
+  last_name: "Pfeiffer",
+  password_digest: "abc123"
+})
+
+user3 = User.create({
+  username: "alasam",
+  email: "3@3",
+  first_name: "Anthony",
+  last_name: "Lasam",
+  password_digest: "abc123"
+})
+
+user4 = User.create({
+  username: "yunghandbeezy",
+  email: "4@4",
+  first_name: "Trent",
+  last_name: "Pfeiffer",
+  password_digest: "abc123"
+})
+
+user5 = User.create({
+  username: "Bince",
+  email: "5@5",
+  first_name: "Riley",
+  last_name: "Pfeiffer",
+  password_digest: "abc123"
+})
+
+user6 = User.create({
+  username: "aLzm",
+  email: "6@6",
+  first_name: "Anthony",
+  last_name: "Lasam",
+  password_digest: "abc123"
+})
+
+## ENTRANTS
+
+entrant1 = Entrant.create({
+  tournament_id: 1,
+  user_id: 1,
+  organizer: false
+})
+
+entrant2 = Entrant.create({
+  tournament_id: 1,
+  user_id: 2,
+  organizer: true
+})
+
+entrant3 = Entrant.create({
+  tournament_id: 1,
+  user_id: 3,
+  organizer: false
+})
