@@ -4,10 +4,10 @@
     <h1><%= @tournament.name %></h1>
     <h2>Organized by: Creator</h2>
       <div class="misc-header-info">
-      <i class="fas fa-calendar-week icon"></i><%= @tournament.date %>
-      <i class="fas fa-clock icon"></i><%= @tournament.time %>
-      <i class="fas fa-medal icon"></i>Skill Level: <%= @tournament.skill %>
-      <i class="fas fa-globe-americas icon"></i>Region: <%= @tournament.region %>
+      <p><i class="fas fa-calendar-week icon"></i><%= @tournament.date %></p>
+      <p><i class="fas fa-clock icon"></i><%= @tournament.time %></p>
+      <p><i class="fas fa-medal icon"></i>Skill Level: <%= @tournament.skill %></p>
+      <p><i class="fas fa-globe-americas icon"></i>Region: <%= @tournament.region %></p>
       </div>
       <div class="image-description">
         <% if @tournament.game == "League of Legends" %>

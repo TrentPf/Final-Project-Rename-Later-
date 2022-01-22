@@ -113,10 +113,17 @@
 
 /* Tournament Show */
 
+.tournament-show {
+  display: flex;
+  justify-content: center;
+}
+
 .tournament-show-container {
   display: flex;
   flex-direction: row;
-  margin-top: 10em;
+  margin-top: 5em;
+  background-color: #1d1f20;
+  width: 75%;
 }
 
 .tournament-header {
@@ -126,7 +133,7 @@
 }
 
 .misc-header-info {
-  margin-bottom: 1em;
+  font-size: .8em;
 }
 
 .image-description {
