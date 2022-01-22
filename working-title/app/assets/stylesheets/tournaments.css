@@ -119,6 +119,7 @@
   font-family: "Roboto";
   padding: 10px;
   line-height: 1.4em;
+  background-color: #1d1f20;
 }
 
 .round {
@@ -139,11 +140,11 @@
   flex-grow: .5;
 }
 
-.round .team-spacer {
+.round .team-spacer{
   flex-grow: 1;
 }
 
-.team {
+.team{
   padding-left: 20px;
   color: #99999c;
 }
@@ -152,11 +153,23 @@
   border-bottom: 1px solid #99999c;
 }
 
-.team-spacer { 
+.team-spacer{ 
   border-right: 1px solid #99999c;
   min-height: 40px;
 }
 
-.team-b { 
+.team-b{ 
   border-top: 1px solid #99999c;
+}
+
+.winning-team {
+ border-bottom: 1px solid #99999c;
+ position: relative;
+}
+
+.fa-crown {
+  color: gold;
+  padding-left: 6em;
+  size: 2em;
+  margin-bottom: 2em;
 }
