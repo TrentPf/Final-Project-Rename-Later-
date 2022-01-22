@@ -111,6 +111,16 @@
   font-size: 0.8em;
 }
 
+/* Tournament Show */
+
+.tournament-details {
+  width: 100%;
+}
+
+.tournament-img {
+  width: 25%;
+}
+
 /* Tournament Ladder */
 
 #ladder {
@@ -120,6 +130,8 @@
   padding: 10px;
   line-height: 1.4em;
   background-color: #1d1f20;
+  padding-left: 25em;
+  width: 100%;
 }
 
 .round {
