@@ -1,17 +1,15 @@
-
-</form>
-</div>
-
+<div class="flex-container">
 <div class="form-style">
 <%= form_for :user, url: '/users' do |f| %>
-<label for="field1"><span>Username <span class="required">*</span></span><%= f.text_field :username, class: 'input-field', placeholder: 'Username' %></label>
-<label for="field2"><span>First Name <span class="required">*</span></span><%= f.text_field :first_name, class: 'input-field', placeholder: 'First Name' %></label>
-<label for="field3"><span>Last Name <span class="required">*</span></span><%= f.text_field :last_name, class: 'input-field', placeholder: 'Last Name' %></label>
-<label for="field4"><span>Email <span class="required">*</span></span><%= f.text_field :email, class: 'input-field', placeholder: 'Email', type: 'email' %></label>
-<label for="field5"><span>Password <span class="required">*</span></span><%= f.text_field :password, class: 'input-field', placeholder: 'Password', type: 'password' %></label>
-<label for="field6"><span>Password Confirmation <span class="required">*</span></span><%= f.text_field :password_confirmation, class: 'input-field', placeholder: 'Password Confirmation', type: 'password' %></label>
+<label for="field1"><span>Username </span><%= f.text_field :username, class: 'input-field', placeholder: 'Username' %></label>
+<label for="field2"><span>First Name </span></span><%= f.text_field :first_name, class: 'input-field', placeholder: 'First Name' %></label>
+<label for="field3"><span>Last Name </span></span><%= f.text_field :last_name, class: 'input-field', placeholder: 'Last Name' %></label>
+<label for="field4"><span>Email </span></span><%= f.text_field :email, class: 'input-field', placeholder: 'Email', type: 'email' %></label>
+<label for="field5"><span>Password </span><%= f.text_field :password, class: 'input-field', placeholder: 'Password', type: 'password' %></label>
+<label for="field6"><span>Password Confirmation </span><%= f.text_field :password_confirmation, class: 'input-field', placeholder: 'Password Confirmation', type: 'password' %></label>
 <label><span> </span><%= submit_tag "Submit" %></label>
 <% end %>
 
 </form>
+</div>
 </div>

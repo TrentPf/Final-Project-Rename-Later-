@@ -1,9 +1,10 @@
 
 .form-style{
-	max-width: 500px;
+	max-width: 5000px;
 	padding: 20px 12px 10px 20px;
 	font: 13px Arial, Helvetica, sans-serif;
 	color: white;
+	
 }
 .form-styl-heading{
 	font-weight: bold;
@@ -23,13 +24,14 @@
 	float: left;
 	padding-top: 8px;
 	padding-right: 5px;
+	font-size: large;
 }
 .form-style span.required{
 	color:red;
 }
 
 .form-style input.input-field, .form-style .select-field{
-	width: 48%;	
+	width: 100%;	
 }
 .form-style input.input-field, 
 .form-style .textarea-field, 

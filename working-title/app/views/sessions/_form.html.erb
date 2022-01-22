@@ -1,6 +1,4 @@
-</form>
-</div>
-
+<div class="flex-container">
 <div class="form-style">
 <%= form_tag '/login' do %>
 <label for="field1"><span>Username <span class="required">*</span></span><%= text_field_tag :username,params[:user_name], class: 'input-field', placeholder: 'Username' %></label>
@@ -10,4 +8,5 @@
 <% end %>
 
 </form>
+</div>
 </div>
