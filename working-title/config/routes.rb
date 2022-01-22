@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   get '/newtournament' => 'tournaments#new'
   post '/tournaments' => 'tournaments#create'
+  post '/join_tournament' => 'tournaments#join_tournament'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

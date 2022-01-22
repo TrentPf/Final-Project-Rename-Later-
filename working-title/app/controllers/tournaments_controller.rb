@@ -49,10 +49,16 @@ class TournamentsController < ApplicationController
 
   end
 
+  def join_tournament
+    Entrant.create(tournament_id: params[:tournament_id], user_id: current_user.id, organizer: false)
+    redirect_to @tournament
+  end
+
   private
+
     # Only allow a list of trusted parameters through.
     def tournament_params
-      params.require(:tournament).permit(:name, :game, :description, :region, :skill, :time, :date, :search)
+      params.require(:tournament).permit(:name, :game, :description, :region, :skill, :time, :date, :search, :user_ids => [])
     end
 end
 
