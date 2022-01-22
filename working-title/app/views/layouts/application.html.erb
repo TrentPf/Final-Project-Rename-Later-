@@ -10,7 +10,12 @@
 <body>
 
 <%= render 'layouts/top_nav' %>
-
+<% if flash[:info]%>
+<%= render 'layouts/notice'%>
+<% end%>
+<% if flash[:error]%>
+<%= render 'layouts/alert'%>
+<% end%>
 <%= yield %>
 
 </body>

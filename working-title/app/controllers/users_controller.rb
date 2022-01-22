@@ -8,8 +8,10 @@ class UsersController < ApplicationController
     if user.save
       session[:user_id] = user.id
       redirect_to '/'
+      flash[:info] = "Register complete!"
     else
       redirect_to '/signup'
+      flash[:error] = "Invalid Information, please try again"
     end
   end
 
