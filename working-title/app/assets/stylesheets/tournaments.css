@@ -139,11 +139,11 @@
   flex-grow: .5;
 }
 
-.round .team-spacer{
+.round .team-spacer {
   flex-grow: 1;
 }
 
-.team{
+.team {
   padding-left: 20px;
   color: #99999c;
 }
@@ -152,11 +152,11 @@
   border-bottom: 1px solid #99999c;
 }
 
-.team-spacer{ 
+.team-spacer { 
   border-right: 1px solid #99999c;
   min-height: 40px;
 }
 
-.team-b{ 
+.team-b { 
   border-top: 1px solid #99999c;
 }
