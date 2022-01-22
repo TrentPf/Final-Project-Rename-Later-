@@ -4,7 +4,11 @@
   		<h1>matchmaker.gg</h1>
   	</div>
   	<div id="find-create">
-  		<%= link_to newtournament_path, class: "main-btn" do %>Create Tournament<% end %>
+      <% if current_user %>
+  		  <%= link_to newtournament_path, class: "main-btn" do %>Create Tournament<% end %>
+      <% else %>
+        <%= link_to '/signup', class: "main-btn" do %>Create Tournament<% end %>
+      <% end %>
   		<%= link_to '/tournaments', class: "main-btn" do %>Find Tournament<% end %>
   	</div>
   </div>
