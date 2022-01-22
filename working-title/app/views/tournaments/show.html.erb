@@ -9,13 +9,11 @@
       <p><i class="fas fa-medal icon"></i>Skill Level: <%= @tournament.skill %></p>
       <p><i class="fas fa-globe-americas icon"></i>Region: <%= @tournament.region %></p>
       </div>
-      <div>
         <% if current_user && !Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
           <div>
             <%= button_to 'Join Tournament', join_tournament_path({tournament_id: @tournament.id, user_id: current_user.id}), method: :post %>
           </div>
         <% end %>
-      </div>
       <div class="image-description">
         <% if @tournament.game == "League of Legends" %>
         <%= image_tag ("lol.png"), class: "tournament-img" %>
