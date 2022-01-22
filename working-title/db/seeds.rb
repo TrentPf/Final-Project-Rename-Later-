@@ -14,7 +14,8 @@ tourn1 = Tournament.create({
   date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 tourn2 = Tournament.create({
@@ -23,7 +24,8 @@ tourn2 = Tournament.create({
   date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 tourn3 = Tournament.create({
@@ -32,34 +34,38 @@ tourn3 = Tournament.create({
   date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 tourn4 = Tournament.create({
   name: "Tournament 4",
   game: "League of Legends",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 tourn5 = Tournament.create({
   name: "Tournament 5",
   game: "Super Smash Bros Ultimate",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 tourn6 = Tournament.create({
   name: "Tournament 6",
   game: "Super Smash Bros Ultimate",
-  date: "04/24/2022",
+  date: "2022-04-24",
   time: "17:00",
   skill: "low",
-  region: "NA"
+  region: "NA",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex"
 })
 
 ## USERS

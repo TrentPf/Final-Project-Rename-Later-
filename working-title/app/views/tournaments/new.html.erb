@@ -12,6 +12,9 @@
     <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
     </div>
     <div class="input-field">
+    <%= f.label :description %><%= f.text_area :description, placeholder: 'Enter a description', required: true %>
+    </div>
+    <div class="input-field">
     <%= f.label :skill %><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true %>
     </div>
     <div class="input-field">
