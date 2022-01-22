@@ -3,10 +3,12 @@
   <div class="sidebar">
   <img src ="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" class="picture">
   <h1 class="heading"><%= current_user.username %></h1>
+  <p>Name: <br>
+  <%= current_user.first_name %> <%= current_user.last_name %> <br>
+  <br>
+  <br>
+  Date Joined: <br>
+  <%= current_user.created_at %>
   </div>
-  <div class="content">
- <div id="tournaments">
-    <%= render "tournaments/tournament" %>
-  </div>
-  </div>
+  <div class="content">Content</div>
 </div>

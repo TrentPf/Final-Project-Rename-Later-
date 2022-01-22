@@ -6,14 +6,13 @@
   grid-auto-flow: row;
   grid-template-areas:
     "header header"
-    "sidebar content1";
+    "sidebar content";
 
 }
 
 .sidebar { grid-area: sidebar; }
 
-.content1 { grid-area: content1; }
-.content2 { grid-area: content2; }
+.content { grid-area: content; }
 
 /**
  * Custom CSS added here 
@@ -47,6 +46,7 @@
   text-align: center;
   color: #00b84c;
   font-size: 30px;
+  margin: .25cm;
 }
 
 .picture {
@@ -56,4 +56,3 @@ margin-top: -2em;
   width: 80%;
   border-radius: 50%;
 }
-
