@@ -113,12 +113,29 @@
 
 /* Tournament Show */
 
-.tournament-details {
-  width: 100%;
+.tournament-show-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10em;
 }
 
-.tournament-img {
-  width: 25%;
+.tournament-header {
+  max-width: 25%;
+  color: #99999c;
+  margin-left: 50px;
+}
+
+.misc-header-info {
+  margin-bottom: 1em;
+}
+
+.image-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  max-width: 25%;
 }
 
 /* Tournament Ladder */
@@ -127,10 +144,8 @@
   display: flex;
   flex-direction: row;
   font-family: "Roboto";
-  padding: 10px;
   line-height: 1.4em;
-  background-color: #1d1f20;
-  padding-left: 25em;
+  justify-content: center;
   width: 100%;
 }
 
@@ -152,11 +167,11 @@
   flex-grow: .5;
 }
 
-.round .team-spacer{
+.round .team-spacer {
   flex-grow: 1;
 }
 
-.team{
+.team {
   padding-left: 20px;
   color: #99999c;
 }
