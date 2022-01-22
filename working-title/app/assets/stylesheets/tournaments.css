@@ -136,6 +136,18 @@
   font-size: .8em;
 }
 
+.info-and-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.join {
+  max-height: 50px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+
 .image-description {
   display: flex;
   flex-direction: column;
@@ -143,6 +155,11 @@
 
 .description {
   max-width: 25%;
+}
+
+.entrants {
+  width: 100%;
+  color: #99999c;
 }
 
 /* Tournament Ladder */
@@ -187,18 +204,19 @@
   border-bottom: 1px solid #99999c;
 }
 
-.team-spacer{ 
+.team-spacer { 
   border-right: 1px solid #99999c;
   min-height: 40px;
 }
 
-.team-b{ 
+.team-b { 
   border-top: 1px solid #99999c;
 }
 
 .winning-team {
  border-bottom: 1px solid #99999c;
  position: relative;
+ margin-right: 2em;
 }
 
 .fa-crown {
