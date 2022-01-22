@@ -20,12 +20,8 @@
 <div class="right-side-header">
   <% if current_user %>
 
-  <%= link_to '/profile', class: "btn" do %>
+  <%= link_to '/users/[id]' , class: "btn" do %>
     My Profile
-  <% end %>
-
-  <%= link_to '/events', class: "btn" do %>
-    My Events
   <% end %>
 
   <%= link_to '/logout', class: "btn" do %>
