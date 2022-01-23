@@ -2,7 +2,7 @@
 <div class="tournament-show-container">
   <div class="tournament-header">
     <h1><%= @tournament.name %></h1>
-    <h2>Organized by: Creator</h2>
+    <h2>Organized by: <%= @organizer&.username %></h2>
     <div class="info-and-button">
       <div class="misc-header-info">
       <p><i class="fas fa-calendar-week icon"></i><%= @tournament.date %></p>
@@ -12,6 +12,7 @@
       </div>
       <% if current_user && !Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
         <%= button_to 'Join Tournament', join_tournament_path({tournament_id: @tournament.id, user_id: current_user.id}), method: :post %>
+      <% elsif current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
       <% else %>
         <%= link_to '/login', class: "join btn" do %>Login to Join<% end %>
       <% end %>
@@ -26,24 +27,25 @@
         <% end %>
           <div class="description">
           <h2>Description: </h2>
-          <p>@tournament.description</p>
+          <p>
+            <%= @tournament.description %>
+          </p>
       </div>
     </div>
     </div>
     <div class="entrants">
     <h4>Entrants</h4>
       <ul>
-        <li>Participant 1</li>
-        <li>Participant 2</li>
-        <li>Participant 3</li>
-        <li>Participant 4</li>
-        <li>Participant 5</li>
-        <li>Participant 6</li>
-        <li>Participant 7</li>
-        <li>Participant 8</li>
+        <% if !@user_entrants.empty? %>
+          <% @user_entrants.each do |entrant| %>
+            <li>
+              <%= entrant.username %>
+            </li>
+          <% end %>
+        <% end %>          
       </ul>
     </div>
-    <%= render 'ladder' %>
+    <%= render 'ladder', starting_seeds: @randomize_entrants %>
     </div>
 
 

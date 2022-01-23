@@ -8,6 +8,11 @@ class TournamentsController < ApplicationController
   # GET /tournaments/1 or /tournaments/1.json
   def show
     @tournament = Tournament.find params[:id]
+
+    @organizer = organizer
+    @user_entrants = user_entrants
+
+    @randomize_entrants = randomize
   end
 
   # GET /tournaments/new
@@ -23,6 +28,7 @@ class TournamentsController < ApplicationController
   def create
     @tournament = Tournament.new(tournament_params)
       if @tournament.save
+        Entrant.create(tournament_id: params[:tournament_id], user_id: current_user.id, organizer: true)
         redirect_to @tournament
       else
         render :new
@@ -51,9 +57,26 @@ class TournamentsController < ApplicationController
 
   def join_tournament
     Entrant.create(tournament_id: params[:tournament_id], user_id: current_user.id, organizer: false)
-    redirect_to @tournament
+    redirect_to ({action: 'show', id: params[:tournament_id]})
   end
 
+  def organizer
+    entrant_organizer = Entrant.where(tournament_id: params[:id]).select{ |entrant| entrant.organizer }[0]
+    User.find(entrant_organizer.user_id)
+  end
+
+  def user_entrants
+    entrants = Entrant.where(tournament_id: params[:id]).select{ |entrant| !entrant.organizer }
+    user_entrants = []
+    entrants.each do |entrant|
+      user_entrants.push(User.find(entrant.user_id))
+    end
+    user_entrants
+  end
+
+  def randomize
+    @user_entrants.shuffle
+  end
   private
 
     # Only allow a list of trusted parameters through.
