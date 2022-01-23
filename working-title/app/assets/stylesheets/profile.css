@@ -1,5 +1,5 @@
 .container {
-  display: grid;
+  display: block;
   width: 80%;
   height: 80%;
   grid-template-areas: "Header"
@@ -12,9 +12,27 @@
   border: 1px dashed #888;
 }
 
-.Header {
+.profile-banner {
   grid-area: Header;
+  margin: 10em;
+  font-size: 5px;
+  height: 20em;
 }
 .Content {
   grid-area: Content;
 }
+
+.picture {
+  margin-top: -2em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 50%;
+  }
+
+  .heading {
+    text-align: center;
+    color: #00b84c;
+    font-size: 30px;
+    margin: .25cm;
+  }
