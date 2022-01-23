@@ -6,28 +6,28 @@
 <div class="tournament-form">
   <%= form_for @tournament do |f| %>
     <div class="input-field">
-    <%= f.label :name %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
+    <%= f.label :name, class: "label" %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :game %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
+    <%= f.label :game, class: "label" %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :description %><%= f.text_area :description, placeholder: 'Enter a description', required: true %>
+    <%= f.label :description, class: "label"  %><%= f.text_area :description, placeholder: 'Enter a description', class: "description", required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :skill %><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true %>
+    <%= f.label :skill, class: "label"  %><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :region %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
+    <%= f.label :region, class: "label"  %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :date %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
+    <%= f.label :date, class: "label"  %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
     </div>
     <div class="input-field">
-    <%= f.label :time %><%= f.time_field :time, value: '%H:%M', required: true %>
+    <%= f.label :time, class: "label"  %><%= f.time_field :time, value: '%H:%M', required: true %>
     </div>
     <div class="create-button">
-    <%= f.submit "Submit", class: "btn" %>
+    <%= f.submit "Create", class: "btn" %>
     </div>
   <% end %>
 </div>

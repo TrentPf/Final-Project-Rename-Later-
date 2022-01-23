@@ -1,5 +1,5 @@
 .tournament-container {
-  margin-top: 15em;
+  margin-top: 10em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,27 +15,28 @@
   width: 50%;
   height: 75%;
   box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
-  font-size: 1.5em;
   border-radius: .5em;
+}
+
+.label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
 }
 
 .input-field {
   display: flex;
   align-items: center;
-  margin: 1em;
   gap: 10px;
 }
 
-.tournament-input {
-  padding: 1em;
-  background-color: #1d1f20;
-  color: #99999c;
+.create-description {
+  resize: none;
   font-family: "Roboto";
-  border: 0;
 }
 
 .create-button {
-  padding-left: 10em;
+  padding-left: 20em;
   padding-bottom: 2em;
   align-items: flex-end;
 }
@@ -47,17 +48,13 @@
   margin: 2em 5em 0em;
 }
 
-.page-title {
-  color: #99999c;
-  font-size: 2em;
-}
-
 .tournament-filter {
   padding: 1em;
   background-color: #1d1f20;
   color: #99999c;
   font-family: "Roboto";
   border: 0;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
 }
 
 #tournaments {
@@ -151,10 +148,6 @@
 .image-description {
   display: flex;
   flex-direction: column;
-}
-
-.description {
-  max-width: 25%;
 }
 
 .entrants {

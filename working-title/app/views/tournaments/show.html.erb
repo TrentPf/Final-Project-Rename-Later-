@@ -1,8 +1,8 @@
 <section class="tournament-show">
 <div class="tournament-show-container">
   <div class="tournament-header">
-    <h1><%= @tournament.name %></h1>
-    <h2>Organized by: <%= @organizer&.username %></h2>
+    <h1 style="color:#ffffff;"><%= @tournament.name %></h1>
+    <h2 style="color:#ffffff;">Organized by: <%= @organizer&.username %></h2>
     <div class="info-and-button">
       <div class="misc-header-info">
       <p><i class="fas fa-calendar-week icon"></i><%= @tournament.date %></p>
@@ -26,7 +26,7 @@
         <%= image_tag ("smash.png"), class: "tournament-img" %>
         <% end %>
           <div class="description">
-          <h2>Description: </h2>
+          <h2 style="color:#ffffff;">Description: </h2>
           <p>
             <%= @tournament.description %>
           </p>
@@ -34,12 +34,12 @@
     </div>
     </div>
     <div class="entrants">
-    <h4>Entrants</h4>
+    <h4 style="color:#ffffff;">Entrants</h4>
       <ul>
         <% if !@user_entrants.empty? %>
           <% @user_entrants.each do |entrant| %>
             <li>
-              <%= entrant.username %>
+              <%= entrant.username  %>
             </li>
           <% end %>
         <% end %>          
