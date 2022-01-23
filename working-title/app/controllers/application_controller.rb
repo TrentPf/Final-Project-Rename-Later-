@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
 
   def event_organized
     @event_organizer = Entrant.where(user_id: current_user.id, organizer: true)
-    @tournaments_organized = []
+    @event_organized = []
     @event_organizer.each do |tournament|
-    @tournaments_organized.push(Tournament.find(tournament.tournament_id))
+    @event_organized.push(Tournament.find(tournament.tournament_id))
     end
-    @tournaments_organized
+    @event_organized
   end
 
   helper_method :event_organized
