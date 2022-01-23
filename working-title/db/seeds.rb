@@ -8,6 +8,7 @@
 
 ## TOURNAMENTS
 
+Tournament.destroy_all
 tourn1 = Tournament.create({
   name: "Tournament 1",
   game: "League of Legends",
