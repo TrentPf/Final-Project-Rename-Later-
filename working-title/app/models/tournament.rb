@@ -11,7 +11,6 @@ class Tournament < ActiveRecord::Base
 
   def self.search(search, game)
     if search
-
       if game
         self.where("name ILIKE ? AND game LIKE ?", "%#{search}%", "%#{game}%")
       else

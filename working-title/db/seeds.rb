@@ -75,7 +75,8 @@ user1 = User.create({
   email: "1@1",
   first_name: "Trent",
   last_name: "Pfeiffer",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 user2 = User.create({
@@ -83,7 +84,8 @@ user2 = User.create({
   email: "2@2",
   first_name: "Riley",
   last_name: "Pfeiffer",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 user3 = User.create({
@@ -91,7 +93,8 @@ user3 = User.create({
   email: "3@3",
   first_name: "Anthony",
   last_name: "Lasam",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 user4 = User.create({
@@ -99,7 +102,8 @@ user4 = User.create({
   email: "4@4",
   first_name: "Trent",
   last_name: "Pfeiffer",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 user5 = User.create({
@@ -107,7 +111,8 @@ user5 = User.create({
   email: "5@5",
   first_name: "Riley",
   last_name: "Pfeiffer",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 user6 = User.create({
@@ -115,7 +120,44 @@ user6 = User.create({
   email: "6@6",
   first_name: "Anthony",
   last_name: "Lasam",
-  password_digest: "abc123"
+  password: "abc123",
+  password_confirmation: "abc123"
+})
+
+user6 = User.create({
+  username: "aLzm",
+  email: "6@6",
+  first_name: "Anthony",
+  last_name: "Lasam",
+  password: "abc123",
+  password_confirmation: "abc123"
+})
+
+user7 = User.create({
+  username: "tttt",
+  email: "7@7",
+  first_name: "Trent",
+  last_name: "Pfeiffer",
+  password: "abc123",
+  password_confirmation: "abc123"
+})
+
+user8 = User.create({
+  username: "rrrr",
+  email: "8@8",
+  first_name: "Riley",
+  last_name: "Pfeiffer",
+  password: "abc123",
+  password_confirmation: "abc123"
+})
+
+user9 = User.create({
+  username: "aaaa",
+  email: "9@9",
+  first_name: "Anthony",
+  last_name: "Lasam",
+  password: "abc123",
+  password_confirmation: "abc123"
 })
 
 ## ENTRANTS
@@ -137,3 +179,40 @@ entrant3 = Entrant.create({
   user_id: 3,
   organizer: false
 })
+
+entrant4 = Entrant.create({
+  tournament_id: 1,
+  user_id: 4,
+  organizer: false
+})
+
+entrant5 = Entrant.create({
+  tournament_id: 1,
+  user_id: 5,
+  organizer: false
+})
+
+entrant6 = Entrant.create({
+  tournament_id: 1,
+  user_id: 6,
+  organizer: false
+})
+
+entrant7 = Entrant.create({
+  tournament_id: 1,
+  user_id: 7,
+  organizer: false
+})
+
+entrant8 = Entrant.create({
+  tournament_id: 1,
+  user_id: 8,
+  organizer: false
+})
+
+entrant9 = Entrant.create({
+  tournament_id: 1,
+  user_id: 9,
+  organizer: false
+})
+
