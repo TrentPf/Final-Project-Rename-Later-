@@ -1,36 +1,17 @@
-<div class="tournament-container">
+<div class="flex-container">
+<div class="form-style">
+<%= form_for @tournament do |f| %>
+<h1 style="color:#ffffff;">Create a tournament: </h1>
+<label for="field1"><span>Name </span><%= f.text_field :name, placeholder: 'Enter a name', required: true, class: 'input-field' %></label>
+<label for="field2"><span>Game </span></span><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true, class: 'input-field' %></label>
+<label for="field3"><span>Description </span></span><%= f.text_area :description, placeholder: 'Enter a description', required: true, class: 'input-field' %></label>
+<label for="field4"><span>Skill Level </span></span><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true, class: 'input-field' %></label>
+<label for="field5"><span>Region </span><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true, class: 'input-field' %></label>
+<label for="field6"><span>Date </span><%= f.date_field :date, value: '%y-%m-%d', required: true, class: 'input-field' %></label>
+<label for="field6"><span>Time </span><%= f.time_field :time, value: '%H:%M', required: true, class: 'input-field' %></label>
+<label><span> </span><%= submit_tag "Create" %></label>
+<% end %>
 
-<article class="tournament-create">
-  <h1>Create a tournament:</h1>
-  
-<div class="tournament-form">
-  <%= form_for @tournament do |f| %>
-    <div class="input-field">
-    <%= f.label :name, class: "label" %><%= f.text_field :name, placeholder: 'Enter a name', required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :game, class: "label" %><%= f.select :game, options_for_select(["League of Legends", "Super Smash Bros Ultimate"]), include_blank: "-Select-", required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :description, class: "label"  %><%= f.text_area :description, placeholder: 'Enter a description', class: "description", required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :skill, class: "label"  %><%= f.select :skill, options_for_select(["Low", "Intermediate", "Advanced"]), include_blank: "-Select-", required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :region, class: "label"  %><%= f.select :region, options_for_select(["NA", "EUW", "EUNE", "KR", "BR", "OCE"]), include_blank: "-Select-", required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :date, class: "label"  %><%= f.date_field :date, value: '%y-%m-%d', required: true %>
-    </div>
-    <div class="input-field">
-    <%= f.label :time, class: "label"  %><%= f.time_field :time, value: '%H:%M', required: true %>
-    </div>
-    <div class="create-button">
-    <%= f.submit "Create", class: "btn" %>
-    </div>
-  <% end %>
+</form>
 </div>
-</article>
-
 </div>
