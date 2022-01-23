@@ -10,11 +10,16 @@
       <p><i class="fas fa-medal icon"></i>Skill Level: <%= @tournament.skill %></p>
       <p><i class="fas fa-globe-americas icon"></i>Region: <%= @tournament.region %></p>
       </div>
-      <% if current_user && !Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
-        <%= button_to 'Join Tournament', join_tournament_path({tournament_id: @tournament.id, user_id: current_user.id}), method: :post, class: "join btn" %>
-      <% elsif current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
+      <% if current_user && !Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) && @user_entrants.length < 8 %>
+        <%= button_to 'Join Tournament', join_tournament_path({tournament_id: @tournament.id, user_id: current_user.id}), method: :post, class: "join-btn" %>
+      <% elsif @user_entrants.length == 8 %>
+        <button class="closed-btn" type="button" disabled>Registration Closed</button>
+      <% elsif current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) && @user_entrants.length < 8 %>
       <% else %>
-        <%= link_to '/login', class: "join btn" do %>Login to Join<% end %>
+        <%= link_to '/login', class: "join-btn" do %>Login to Join<% end %>
+      <% end %>
+      <% if current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) %>
+        <button type="button" class="leave-btn">Drop Out</button>
       <% end %>
 
       
