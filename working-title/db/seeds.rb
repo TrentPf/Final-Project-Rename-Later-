@@ -165,7 +165,7 @@ user9 = User.create({
 entrant1 = Entrant.create({
   tournament_id: 1,
   user_id: 1,
-  organizer: false
+  organizer: true
 })
 
 entrant2 = Entrant.create({
