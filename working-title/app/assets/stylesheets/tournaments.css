@@ -1,41 +1,10 @@
-.tournament-container {
-  margin-top: 15em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.tournament-create {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #99999c;
-  background-color: #1d1f20;
-  width: 50%;
-  height: 75%;
-  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
-  font-size: 1.5em;
-  border-radius: .5em;
-}
-
-.input-field {
-  display: flex;
-  align-items: center;
-  margin: 1em;
-  gap: 10px;
-}
-
-.tournament-input {
-  padding: 1em;
-  background-color: #1d1f20;
-  color: #99999c;
+.create-description {
+  resize: none;
   font-family: "Roboto";
-  border: 0;
 }
 
 .create-button {
-  padding-left: 10em;
+  padding-left: 20em;
   padding-bottom: 2em;
   align-items: flex-end;
 }
@@ -47,17 +16,13 @@
   margin: 2em 5em 0em;
 }
 
-.page-title {
-  color: #99999c;
-  font-size: 2em;
-}
-
 .tournament-filter {
   padding: 1em;
   background-color: #1d1f20;
   color: #99999c;
   font-family: "Roboto";
   border: 0;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
 }
 
 #tournaments {
@@ -124,6 +89,8 @@
   margin-top: 5em;
   background-color: #1d1f20;
   width: 75%;
+  border-radius: .5em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
 }
 
 .tournament-header {
@@ -142,19 +109,65 @@
   justify-content: space-between;
 }
 
-.join {
+.join-btn {
+  background-color: #2b2d2f;
+  transition: background-color .5s;
+  color: #ffffff;
+  border: 0;
+  border-radius: .5em;
+  padding: .75em 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-right: 1em;
   max-height: 50px;
   margin-top: 5em;
   margin-bottom: 1em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
+}
+
+.join-btn:hover {
+  background-color: #00b84c;
+}
+
+.leave-btn {
+  background-color: #ff0000;
+  transition: background-color .5s;
+  color: #ffffff;
+  border: 0;
+  border-radius: .5em;
+  padding: .75em 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-height: 50px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
+}
+
+.closed-btn {
+  background-color: #2b2d2f;
+  color: #99999c;
+  border: 0;
+  border-radius: .5em;
+  padding: .75em 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-height: 50px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
 }
 
 .image-description {
   display: flex;
   flex-direction: column;
-}
-
-.description {
-  max-width: 25%;
 }
 
 .entrants {

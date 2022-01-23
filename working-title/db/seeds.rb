@@ -216,3 +216,35 @@ entrant9 = Entrant.create({
   organizer: false
 })
 
+entrant10 = Entrant.create({
+  tournament_id: 2,
+  user_id: 9,
+  organizer: true
+})
+
+entrant11 = Entrant.create({
+  tournament_id: 3,
+  user_id: 9,
+  organizer: true
+})
+
+entrant12 = Entrant.create({
+  tournament_id: 4,
+  user_id: 9,
+  organizer: true
+})
+
+entrant13 = Entrant.create({
+  tournament_id: 5,
+  user_id: 9,
+  organizer: true
+})
+
+entrant14 = Entrant.create({
+  tournament_id: 6,
+  user_id: 9,
+  organizer: true
+})
+
+
+
