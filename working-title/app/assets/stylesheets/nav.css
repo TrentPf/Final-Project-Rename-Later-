@@ -11,10 +11,6 @@ nav {
   max-width: 200px;
 }
 
-.title:hover {
-  color: #ffffff;
-}
-
 .search-bar {
   background-color: #2b2d2f;
   border-radius: .5em;
