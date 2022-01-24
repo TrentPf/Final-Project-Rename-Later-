@@ -21,6 +21,9 @@ class UsersController < ApplicationController
     end
     @event_organized
 
+    @amount_created = @event_organized.length
+    @amount_attended = @event_attended.length
+
   end
 
   def create
