@@ -11,7 +11,13 @@
   <%= current_user.first_name %> <%= current_user.last_name %> 
   <br>
   Date Joined: <br>
-  <%= current_user.created_at %>
+  <%= current_user.created_at.strftime("%d/%m/%Y") %>
+  <br>
+  Events Hosted: 
+  <%= @amount_created %>
+  <br>
+  Events Attended: 
+  <%= @amount_attended %>
   </div>
   </div>
 
