@@ -1,38 +1,75 @@
 .container {
-  display: block;
-  width: 80%;
-  height: 80%;
-  grid-template-areas: "Header"
-  "Content"
-  "Content";
-  grid-template-columns: 1fr;
-  grid-template-rows: 134px 130px 543px;
-}
-.container > div {
-  border: 1px dashed #888;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5em;
+  justify-content: space-around;
 }
 
-.profile-banner {
-  grid-area: Header;
-  margin: 10em;
-  font-size: 5px;
-  height: 20em;
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  max-height: 450px;
+  color: #ffffff;
+  margin-left: 2em;
+  background-color: #1d1f20;
+  border-radius: .5em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
 }
-.Content {
-  grid-area: Content;
+
+.profile-info {
+  display: flex;
+  align-content: center;
 }
 
 .picture {
-  margin-top: -2em;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    border-radius: 50%;
-  }
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
 
-  .heading {
-    text-align: center;
-    color: #00b84c;
-    font-size: 30px;
-    margin: .25cm;
-  }
+.card-content {
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.heading {
+  text-align: center;
+  color: #00b84c;
+  font-size: 30px;
+  margin: .25cm;
+}
+
+.tournament-history {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  font-size: 2em;
+  background-color: #1d1f20;
+  border-radius: .5em;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
+}
+
+.table-headings {
+  font-size: 1.5em;
+  color: #00b84c;
+}
+
+.table-content {
+  color: #ffffff;
+  background-color: #2b2d2f;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+td {
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.35);
+}
