@@ -61,6 +61,11 @@ class TournamentsController < ApplicationController
     redirect_to ({action: 'show', id: params[:tournament_id]})
   end
 
+  def leave_tournament
+    Entrant.where(tournament_id: params[:id], user_id: current_user.id).destroy_all
+    redirect_to ({action: 'show', id: params[:tournament_id]})
+  end
+
   def organizer
     entrant_organizer = Entrant.where(tournament_id: params[:id]).select{ |entrant| entrant.organizer }[0]
     User.find(entrant_organizer.user_id)

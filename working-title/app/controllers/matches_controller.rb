@@ -4,11 +4,15 @@ class MatchesController < ApplicationController
   end
 
   def edit
-    @matches = Match.where(tournament_id: @tournament.id)
+    @matches = Match.find(:first, :conditions => ["tournament_id = ?", @tournament.id])
   end
 
   def update
+    @matches = Match.find(:first, :conditions => ["tournament_id = ?", @tournament.id])
+    respond_to do |format|
+      if @matches.update matches_params
 
+      end
   end
 
   private
