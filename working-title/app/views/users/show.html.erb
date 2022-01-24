@@ -42,6 +42,31 @@
       </tbody>
     </table>
 <% end %>
+<br>
+<% if !@event_attended.empty? %>
+<table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Game</th>
+          <th scope="col">Date</th>
+          <th scope="col">Skill</th>
+          <th scope="col">Region</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @event_attended.each do |a|%>
+          <tr>
+            <td><%= a.name %></td>
+            <td><%= a.game %></td>
+            <td><%= a.date %></td>
+            <td><%= a.skill %></td>
+            <td><%= a.region %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% end %>
 
   </div>
 

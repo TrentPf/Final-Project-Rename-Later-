@@ -5,12 +5,22 @@ class UsersController < ApplicationController
   end
 
   def show
+
+    @event_attender = Entrant.where(user_id: current_user.id, organizer: false)
+    @event_attended = []
+    @event_attender.each do |tournament|
+      @event_attended.push(Tournament.find(tournament.tournament_id))
+    end
+
+    @event_attended
+
     @event_organizer = Entrant.where(user_id: current_user.id, organizer: true)
     @event_organized = []
     @event_organizer.each do |tournament|
-    @event_organized.push(Tournament.find(tournament.tournament_id))
+      @event_organized.push(Tournament.find(tournament.tournament_id))
     end
     @event_organized
+
   end
 
   def create
