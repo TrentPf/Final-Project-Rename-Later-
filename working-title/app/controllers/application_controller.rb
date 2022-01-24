@@ -10,18 +10,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
-  def event_organized
-    @event_organizer = Entrant.where(user_id: current_user.id, organizer: true)
-    @event_organized = []
-    @event_organizer.each do |tournament|
-    @event_organized.push(Tournament.find(tournament.tournament_id))
-    end
-    @event_organized
-  end
-
-  helper_method :event_organized
-  
-  def authorize
+   def authorize
     redirect_to '/login' unless current_user
   end
 end

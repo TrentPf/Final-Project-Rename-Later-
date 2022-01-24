@@ -4,8 +4,11 @@
   <img src ="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" class="picture">
   <h1 class="heading"><%= current_user.username %>
   
-      <% if !event_organized.empty? %>
-      <% event_organized %>
+      <% if !@event_organized.empty? %>
+      <% @event_organized.each do |t|%>
+      <%= t.name %>
+      <%= t.game %>
+      <% end %>
     <% end %>
   
   </h1>

@@ -4,6 +4,15 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    @event_organizer = Entrant.where(user_id: current_user.id, organizer: true)
+    @event_organized = []
+    @event_organizer.each do |tournament|
+    @event_organized.push(Tournament.find(tournament.tournament_id))
+    end
+    @event_organized
+  end
+
   def create
     user = User.new(user_params)
     if user.save
