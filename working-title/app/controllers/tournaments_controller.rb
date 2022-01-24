@@ -12,7 +12,8 @@ class TournamentsController < ApplicationController
     @organizer = organizer
     @user_entrants = user_entrants
 
-    @randomize_entrants = randomize
+    @randomize_entrants = @user_entrants #Placeholder for randomizing seeds
+
   end
 
   # GET /tournaments/new
