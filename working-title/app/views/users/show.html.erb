@@ -4,30 +4,44 @@
   <img src ="https://www.tenforums.com/geek/gars/images/2/types/thumb_15951118880user.png" class="picture">
   <h1 class="heading"><%= current_user.username %>
   
-      <% if !@event_organized.empty? %>
-      <% @event_organized.each do |t|%>
-      <%= t.name %>
-      <%= t.game %>
-      <% end %>
-    <% end %>
-  
+ 
   </h1>
   Name: <br>
   <%= current_user.first_name %> <%= current_user.last_name %> 
-     
-  <br>
-  <br>
-
-
-
-
-
   <br>
   Date Joined: <br>
   <%= current_user.created_at %>
   </div>
   </div>
   <div class="Content">
+      
+      
+    
+    
+<% if !@event_organized.empty? %>
+<table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Game</th>
+          <th scope="col">Date</th>
+          <th scope="col">Skill</th>
+          <th scope="col">Region</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @event_organized.each do |t|%>
+          <tr>
+            <td><%= t.name %></td>
+            <td><%= t.game %></td>
+            <td><%= t.date %></td>
+            <td><%= t.skill %></td>
+            <td><%= t.region %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<% end %>
 
   </div>
 
