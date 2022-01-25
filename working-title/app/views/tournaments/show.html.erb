@@ -12,9 +12,9 @@
       </div>
       <% if current_user && !Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) && @user_entrants.length < 8 %>
         <%= button_to 'Join Tournament', join_tournament_path({tournament_id: @tournament.id, user_id: current_user.id}), method: :post, class: "join-btn" %>
-      <% elsif @user_entrants.length == 8 %>
+      <% elsif @user_entrants.length == 8 && Entrant.exists?(tournament_id: @tournament.id, user_id: !current_user.id) %>
         <button class="closed-btn" type="button" disabled>Registration Closed</button>
-      <% elsif current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) && @user_entrants.length < 8 %>
+      <% elsif current_user && Entrant.exists?(tournament_id: @tournament.id, user_id: current_user.id) && @user_entrants.length <= 8 %>
       <% else %>
         <%= link_to '/login', class: "join-btn" do %>Login to Join<% end %>
       <% end %>
