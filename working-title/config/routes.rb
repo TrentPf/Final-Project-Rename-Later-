@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post '/join_tournament' => 'tournaments#join_tournament'
 
   get '/matches/:id/edit' => 'matches#edit'
+  patch '/matches/:id' => 'matches#update'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

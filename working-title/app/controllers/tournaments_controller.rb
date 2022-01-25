@@ -12,6 +12,7 @@ class TournamentsController < ApplicationController
     @organizer = organizer
     @user_entrants = user_entrants
 
+    @matches = Match.where(tournament_id: params[:id])[0]
     @randomize_entrants = @user_entrants #Placeholder for randomizing seeds
 
   end
@@ -30,6 +31,7 @@ class TournamentsController < ApplicationController
     @tournament = Tournament.new(tournament_params)
       if @tournament.save
         Entrant.create(tournament_id: params[:tournament_id], user_id: current_user.id, organizer: true)
+        Match.create(tournament_id: params[:tournament_id], match1: "", match2: "", match3: "", match4: "", match5: "", match6: "", match7: "")
         redirect_to @tournament
       else
         render :new
