@@ -1,6 +1,7 @@
 class Tournament < ActiveRecord::Base
   has_many :entrants, dependent: :destroy
   has_many :users, through: :entrants, dependent: :destroy
+  has_one :match
   validates :name, presence: true
   validates :game, presence: true
   validates :description, presence: true

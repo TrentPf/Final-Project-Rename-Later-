@@ -5,15 +5,14 @@ class MatchesController < ApplicationController
   end
 
   def edit
-    @matches = Match.where(tournament_id: tournament_id)[0]
-    render :edit
+    @match = Match.find(params[:id])
   end
 
   def update
-    @matches = Match.find(params[:id])
-    if @matches.update(params.require(:matches).permit(:match1, :match2, :match3, :match4, :match5, :match6, :match7))
+    @match = Match.find(params[:id])
+    if @match.update(matches_params)
       flash[:success] = "Bracket updated successfully!"
-      redirect_to controller: :tournaments, action: :show
+      redirect_to tournament_path(@match.tournament_id)
     else
       flash.now[:error] = "Bracker update failed!"
       render :edit
@@ -23,6 +22,6 @@ class MatchesController < ApplicationController
   private
 
   def matches_params
-    params.require(:matches).permit(:match1, :match2, :match3, :match4, :match5, :match6, :match7, :tournament_id)
+    params.require(:match).permit(:match1, :match2, :match3, :match4, :match5, :match6, :match7, :tournament_id)
   end
 end

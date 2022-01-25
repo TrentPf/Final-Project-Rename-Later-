@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
   resources :tournaments, only: [:index, :show]
   resources :users, only: [:index, :show]
-
+  resources :matches, only: [:edit, :update]
   # Not certain for this yet
   resource :make, only: [:show] do
     post :add_tournament
@@ -21,9 +21,6 @@ Rails.application.routes.draw do
   get '/newtournament' => 'tournaments#new'
   post '/tournaments' => 'tournaments#create'
   post '/join_tournament' => 'tournaments#join_tournament'
-
-  get '/matches/:id/edit' => 'matches#edit'
-  patch '/matches/:id' => 'matches#update'
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
