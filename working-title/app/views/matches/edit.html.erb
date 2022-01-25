@@ -1,6 +1,6 @@
 <h1> Edit Brackets </h1>
 
-<%= form_with model: @match, url: matches_path(@match), method: :patch, local: true do |f| %>
+<%= form_with model: @match, local: true do |f| %>
   <%= f.text_field :match1 %>
   <%= f.text_field :match2 %>
   <%= f.text_field :match3 %>

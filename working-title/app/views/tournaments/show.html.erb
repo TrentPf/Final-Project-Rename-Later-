@@ -50,9 +50,10 @@
         <% end %>          
       </ul>
     </div>
-    <%= render 'ladder', starting_seeds: @randomize_entrants %>
+    <%= render 'ladder', starting_seeds: @randomize_entrants, matches: @match %>
     </div>
 
-
-
+    <% if current_user.id == @organizer.id %>
+      <%= button_to 'Edit Tournament', edit_match_path({tournament_id: @tournament.id, id: @match.id}), method: :get, class: "join-btn" %>
+    <% end %>
 </section>
