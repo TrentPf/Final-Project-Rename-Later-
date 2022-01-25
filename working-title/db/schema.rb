@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_22_034155) do
+ActiveRecord::Schema.define(version: 2022_01_24_232400) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 2022_01_22_034155) do
     t.boolean "organizer"
     t.index ["tournament_id"], name: "index_entrants_on_tournament_id"
     t.index ["user_id"], name: "index_entrants_on_user_id"
+  end
+
+  create_table "matches", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "match1"
+    t.string "match2"
+    t.string "match3"
+    t.string "match4"
+    t.string "match5"
+    t.string "match6"
+    t.string "match7"
+    t.bigint "tournament_id"
+    t.index ["tournament_id"], name: "index_matches_on_tournament_id"
   end
 
   create_table "tournaments", force: :cascade do |t|
@@ -45,4 +59,5 @@ ActiveRecord::Schema.define(version: 2022_01_22_034155) do
     t.string "password_digest"
   end
 
+  add_foreign_key "matches", "tournaments"
 end
