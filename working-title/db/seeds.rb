@@ -161,6 +161,15 @@ user9 = User.create({
   password_confirmation: "abc123"
 })
 
+user10 = User.create({
+  username: "test",
+  email: "test@test",
+  first_name: "Anthony",
+  last_name: "Lasam",
+  password: "abc123",
+  password_confirmation: "abc123"
+})
+
 ## ENTRANTS
 
 entrant1 = Entrant.create({
