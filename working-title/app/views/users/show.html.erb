@@ -37,8 +37,8 @@
       </thead>
       <tbody>
         <% @event_organized.each do |t|%>
-          <tr class="table-content">
-            <td><a href="http://127.0.0.1:3000/tournaments/<%= t.id %>"><%= t.name %></a></td>
+          <tr>
+            <td><button class="button"><a href="http://127.0.0.1:3000/tournaments/<%= t.id %>"><%= t.name %></a></button></td>
             <td><%= t.game %></td>
             <td><%= t.date %></td>
             <td><%= t.skill %></td>
