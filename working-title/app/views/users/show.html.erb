@@ -37,7 +37,7 @@
       </thead>
       <tbody>
         <% @event_organized.each do |t|%>
-          <tr>
+          <tr class="table-content">
             <td><button class="button"><a href="http://127.0.0.1:3000/tournaments/<%= t.id %>"><%= t.name %></a></button></td>
             <td><%= t.game %></td>
             <td><%= t.date %></td>
@@ -47,7 +47,7 @@
         <% end %>
         <% @event_attended.each do |a|%>
           <tr class="table-content">
-            <td><a href="http://127.0.0.1:3000/tournaments/<%= a.id %>"><%= a.name %></a></td>
+            <td><button class="button2"><a href="http://127.0.0.1:3000/tournaments/<%= a.id %>"><%= a.name %></a></td>
             <td><%= a.game %></td>
             <td><%= a.date %></td>
             <td><%= a.skill %></td>

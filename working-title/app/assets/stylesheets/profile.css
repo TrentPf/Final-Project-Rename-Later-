@@ -78,4 +78,13 @@ td {
   padding: 12px 28px;
   background-color: #4CAF50;
   color: white;
+  font-family: "Roboto";
+}
+
+.button2 {
+  border-radius: 8px;
+  padding: 12px 28px;
+  background-color: #d1ee52;
+  color: white;
+  font-family: "Roboto";
 }

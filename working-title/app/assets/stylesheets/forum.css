@@ -21,9 +21,9 @@
 	margin: 0px 0px 15px 0px;
 }
 .form-style label > span{
-	width: 100px;
+	display: inline-block;
+	width: 150px;
 	font-weight: bold;
-	float: left;
 	padding-top: 8px;
 	padding-right: 5px;
 	font-size: large;
