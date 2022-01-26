@@ -256,5 +256,13 @@ entrant14 = Entrant.create({
   organizer: true
 })
 
-
-
+matches1 = Match.create({
+  match1: "",
+  match2: "",
+  match3: "",
+  match4: "",
+  match5: "",
+  match6: "",
+  match7: "",
+  tournament_id: 1
+})
