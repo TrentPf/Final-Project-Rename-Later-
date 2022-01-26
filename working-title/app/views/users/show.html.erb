@@ -24,9 +24,10 @@
   
 
 <% if !@event_organized.empty? %>
+<div class="tournament-history">
 <table class="table">
       <thead>
-        <tr>
+        <tr class="table-headings">
           <th scope="col">Name</th>
           <th scope="col">Game</th>
           <th scope="col">Date</th>
@@ -36,7 +37,7 @@
       </thead>
       <tbody>
         <% @event_organized.each do |t|%>
-          <tr>
+          <tr class="table-content">
             <td><a href="http://127.0.0.1:3000/tournaments/<%= t.id %>"><%= t.name %></a></td>
             <td><%= t.game %></td>
             <td><%= t.date %></td>
@@ -55,8 +56,8 @@
         <% end %>
       </tbody>
     </table>
+    </div>
 <% end %>
 <br>
-
 
 </div>
