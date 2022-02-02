@@ -99,7 +99,7 @@ user3 = User.create({
 })
 
 user4 = User.create({
-  username: "yunghandbeezy",
+  username: "trent1234",
   email: "4@4",
   first_name: "Trent",
   last_name: "Pfeiffer",
@@ -135,7 +135,7 @@ user6 = User.create({
 })
 
 user7 = User.create({
-  username: "tttt",
+  username: "player3",
   email: "7@7",
   first_name: "Trent",
   last_name: "Pfeiffer",
@@ -144,7 +144,7 @@ user7 = User.create({
 })
 
 user8 = User.create({
-  username: "rrrr",
+  username: "akuma4321",
   email: "8@8",
   first_name: "Riley",
   last_name: "Pfeiffer",
@@ -153,7 +153,7 @@ user8 = User.create({
 })
 
 user9 = User.create({
-  username: "aaaa",
+  username: "ryu75",
   email: "9@9",
   first_name: "Anthony",
   last_name: "Lasam",
@@ -162,7 +162,7 @@ user9 = User.create({
 })
 
 user10 = User.create({
-  username: "test",
+  username: "hadouken34",
   email: "test@test",
   first_name: "Anthony",
   last_name: "Lasam",

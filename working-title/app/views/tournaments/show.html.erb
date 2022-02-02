@@ -43,7 +43,7 @@
       <ul>
         <% if !@user_entrants.empty? %>
           <% @user_entrants.each do |entrant| %>
-            <li>
+            <li class="entrant">
               <%= entrant.username  %>
             </li>
           <% end %>

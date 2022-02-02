@@ -238,3 +238,7 @@
   size: 2em;
   margin-bottom: 2em;
 }
+
+.entrant {
+  list-style-type: none;
+}
